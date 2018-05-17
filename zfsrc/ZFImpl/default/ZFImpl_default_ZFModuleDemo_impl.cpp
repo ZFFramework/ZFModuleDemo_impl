@@ -12,6 +12,11 @@
 
 ZF_NAMESPACE_GLOBAL_BEGIN
 
+zfstring demoFuncFromImpl(void)
+{
+    return zfText("I'm string from ZFModuleDemo_impl");
+}
+
 ZF_GLOBAL_INITIALIZER_INIT(ZFModuleDemo_impl_test)
 {
     zfLogT() << zfText("I'm contents from ZFModuleDemo_impl");
