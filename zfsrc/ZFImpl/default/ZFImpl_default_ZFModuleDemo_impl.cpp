@@ -9,12 +9,16 @@
  * ====================================================================== */
 #include "ZFImpl_default_ZFModuleDemo_impl.h"
 #include "ZFCore.h"
+#include "ZFModuleDemo_lib.h"
 
 ZF_NAMESPACE_GLOBAL_BEGIN
 
 zfstring demoFuncFromImpl(void)
 {
-    return zfText("I'm string from ZFModuleDemo_impl");
+    zfstring ret = zfText("I'm string from ZFModuleDemo_impl");
+    ret += zfText(", and I'm string from ZFModuleDemo_lib: ");
+    ret += demoFunc();
+    return ret;
 }
 
 ZF_GLOBAL_INITIALIZER_INIT(ZFModuleDemo_impl_test)
