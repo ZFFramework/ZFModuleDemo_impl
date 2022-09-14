@@ -32,6 +32,7 @@ android {
     sourceSets {
         main {
             java.srcDirs += this.projectDir.getAbsolutePath() + '/../../../../zfsrc/ZFImpl/sys_Android/java'
+            assets.srcDirs += ['assets']
         }
     }
     externalNativeBuild {
