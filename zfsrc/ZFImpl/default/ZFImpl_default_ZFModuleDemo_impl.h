@@ -1,7 +1,7 @@
 #ifndef _ZFI_ZFImpl_default_ZFModuleDemo_impl_h_
 #define _ZFI_ZFImpl_default_ZFModuleDemo_impl_h_
 
-#include "ZFImpl.h"
+#include "../ZFImpl_ZFModuleDemo_impl.h"
 
 #include "ZFImpl/default/ZFImpl_default_ZF_impl.h"
 
