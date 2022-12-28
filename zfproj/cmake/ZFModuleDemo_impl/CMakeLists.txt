@@ -5,7 +5,6 @@ message("Build with type: ${CMAKE_BUILD_TYPE}, path: ${PROJECT_SOURCE_DIR}")
 set(ZF_ROOT_PATH ${PROJECT_SOURCE_DIR}/../../../../../../ZFFramework)
 include("${ZF_ROOT_PATH}/tools/spec/cmake/util.cmake")
 
-add_compile_definitions(ZFLIB_ZFModuleDemo_impl=ZF_ENV_EXPORT)
 file(GLOB_RECURSE srcfiles RELATIVE ${PROJECT_SOURCE_DIR}
     ${PROJECT_SOURCE_DIR}/../../../zfsrc/*.c
     ${PROJECT_SOURCE_DIR}/../../../zfsrc/*.cpp
@@ -19,6 +18,7 @@ endif()
 add_library(ZFModuleDemo_impl SHARED ${srcfiles})
 strip_file_macro(ZFModuleDemo_impl)
 set_target_properties(ZFModuleDemo_impl PROPERTIES LINKER_LANGUAGE CXX)
+target_compile_definitions(ZFModuleDemo_impl PUBLIC ZFLIB_ZFModuleDemo_impl=ZF_ENV_EXPORT)
 if(COMMAND zfprojConfigAfter_ZFModuleDemo_impl)
     zfprojConfigAfter_ZFModuleDemo_impl(ZFModuleDemo_impl)
 endif()
