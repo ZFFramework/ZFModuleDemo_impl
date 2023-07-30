@@ -4,16 +4,14 @@
 
 ZF_NAMESPACE_GLOBAL_BEGIN
 
-zfstring demoFuncFromImpl(void)
-{
+zfstring demoFuncFromImpl(void) {
     zfstring ret = "I'm string from ZFModuleDemo_impl";
     ret += ", and I'm string from ZFModuleDemo_lib: ";
     ret += demoFunc();
     return ret;
 }
 
-ZF_GLOBAL_INITIALIZER_INIT(ZFModuleDemo_impl_test)
-{
+ZF_GLOBAL_INITIALIZER_INIT(ZFModuleDemo_impl_test) {
     zfLog() << "I'm contents from ZFModuleDemo_impl";
 }
 ZF_GLOBAL_INITIALIZER_END(ZFModuleDemo_impl_test)
