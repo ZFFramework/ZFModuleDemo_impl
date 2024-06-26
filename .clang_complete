@@ -3,5 +3,5 @@
 
 -I../../../ZFFramework/ZF/ZFCore/zfsrc
 -I../../../ZFFramework/ZF/ZF_impl/zfsrc
--I../../../ZFModule/ZF/ZFModuleDemo_lib/zfsrc
+-I../../../ZFFramework/ZFModule/ZFModuleDemo_lib/zfsrc
 
