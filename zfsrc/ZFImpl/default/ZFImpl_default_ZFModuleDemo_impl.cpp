@@ -12,7 +12,7 @@ zfstring demoFuncFromImpl(void) {
 }
 
 ZF_GLOBAL_INITIALIZER_INIT(ZFModuleDemo_impl_test) {
-    zfLog() << "I'm contents from ZFModuleDemo_impl";
+    ZFLog() << "I'm contents from ZFModuleDemo_impl";
 }
 ZF_GLOBAL_INITIALIZER_END(ZFModuleDemo_impl_test)
 
