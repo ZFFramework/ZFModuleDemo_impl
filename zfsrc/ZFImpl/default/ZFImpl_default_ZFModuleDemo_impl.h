@@ -7,7 +7,7 @@
 
 ZF_NAMESPACE_GLOBAL_BEGIN
 
-extern zfstring demoFuncFromImpl(void);
+extern ZFLIB_ZFModuleDemo_impl zfstring demoFuncFromImpl(void);
 
 ZF_NAMESPACE_GLOBAL_END
 #endif // #ifndef _ZFI_ZFImpl_default_ZFModuleDemo_impl_h_
