@@ -47,7 +47,7 @@ install(
 install(TARGETS ZFModuleDemo_impl EXPORT ZFModuleDemo_impl
     LIBRARY DESTINATION "${ZF_ROOT_PATH}/_release/cmake/module/ZFModuleDemo_impl/lib"
     ARCHIVE DESTINATION "${ZF_ROOT_PATH}/_release/cmake/module/ZFModuleDemo_impl/lib"
-    RUNTIME DESTINATION "${ZF_ROOT_PATH}/_release/cmake/module/ZFModuleDemo_impl/bin")
+    RUNTIME DESTINATION "${ZF_ROOT_PATH}/_release/cmake/module/ZFModuleDemo_impl/lib")
 install(
     DIRECTORY "${PROJECT_SOURCE_DIR}/../../../zfres/"
     DESTINATION "${ZF_ROOT_PATH}/_release/cmake/module/ZFModuleDemo_impl/zfres"
