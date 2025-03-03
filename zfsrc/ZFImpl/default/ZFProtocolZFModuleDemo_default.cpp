@@ -3,7 +3,7 @@
 
 ZF_NAMESPACE_GLOBAL_BEGIN
 
-ZFPROTOCOL_IMPLEMENTATION_BEGIN(ZFModuleDemoImpl_default, ZFModuleDemo, ZFProtocolLevel::e_Default)
+ZFPROTOCOL_IMPLEMENTATION_BEGIN(ZFModuleDemoImpl_default, ZFModuleDemo, v_ZFProtocolLevel::e_Default)
 public:
     virtual zfstring demoImpl(void) {
         return "string from ZFModuleDemoImpl";
