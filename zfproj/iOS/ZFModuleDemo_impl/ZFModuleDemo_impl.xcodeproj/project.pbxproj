@@ -6,21 +6,8 @@
 	objectVersion = 54;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		C0BF2F5B5BB8BFF0893AFEE2956A7FF6 /* ZFModuleDemo_impl_aggregate */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = C4DB1149DF5752D47E42AEF8991F711A /* Build configuration list for PBXAggregateTarget "ZFModuleDemo_impl_aggregate" */;
-			buildPhases = (
-				342B58B6C43BFC0475F1132A0030608E /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = ZFModuleDemo_impl_aggregate;
-			productName = ZFModuleDemo_impl_aggregate;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
+		77F811306BACF9F723675005FB4C5DF3 /* Pods_ZFModuleDemo_impl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B50E0F886919719533229E92026317D /* Pods_ZFModuleDemo_impl.framework */; };
 		E40CD66A4AEFD794122B2D0E21777650 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2A038B16ED94AE08513468CFA2D7820 /* Foundation.framework */; };
 		F438AB0EA59CE026619BA8BF0ABF143B /* zfgensrc_ZFModuleDemo_impl.mm in Sources */ = {isa = PBXBuildFile; fileRef = 517A7EF041C4202372DB434C7841B29F /* zfgensrc_ZFModuleDemo_impl.mm */; };
 /* End PBXBuildFile section */
@@ -40,6 +27,9 @@
 /* Begin PBXFileReference section */
 		3D779066875DBFF11FF01A346F87CA72 /* libZFModuleDemo_impl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libZFModuleDemo_impl.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		517A7EF041C4202372DB434C7841B29F /* zfgensrc_ZFModuleDemo_impl.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = zfgensrc_ZFModuleDemo_impl.mm; sourceTree = "<group>"; };
+		6B50E0F886919719533229E92026317D /* Pods_ZFModuleDemo_impl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZFModuleDemo_impl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B304DCD72CCE5F4DAAA261CFEA14656 /* Pods-ZFModuleDemo_impl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZFModuleDemo_impl.debug.xcconfig"; path = "Target Support Files/Pods-ZFModuleDemo_impl/Pods-ZFModuleDemo_impl.debug.xcconfig"; sourceTree = "<group>"; };
+		984DF8B79AC28EB4376BA62BD621420A /* Pods-ZFModuleDemo_impl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZFModuleDemo_impl.release.xcconfig"; path = "Target Support Files/Pods-ZFModuleDemo_impl/Pods-ZFModuleDemo_impl.release.xcconfig"; sourceTree = "<group>"; };
 		AB015D5E3BE366CA0068F69743D095E8 /* zfsrc */ = {isa = PBXFileReference; lastKnownFileType = folder; name = zfsrc; path = ../../../zfsrc; sourceTree = "<group>"; };
 		D2A038B16ED94AE08513468CFA2D7820 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -50,16 +40,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				E40CD66A4AEFD794122B2D0E21777650 /* Foundation.framework in Frameworks */,
+				77F811306BACF9F723675005FB4C5DF3 /* Pods_ZFModuleDemo_impl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F425EB1330C8E5739C0F0AE55F73D2A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7B304DCD72CCE5F4DAAA261CFEA14656 /* Pods-ZFModuleDemo_impl.debug.xcconfig */,
+				984DF8B79AC28EB4376BA62BD621420A /* Pods-ZFModuleDemo_impl.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		652FDB1E6B465E7A81E851FB1C4D404E = {
 			isa = PBXGroup;
 			children = (
 				75EE5D9F3FC4BD23AE9B22A709F93FB6 /* Frameworks */,
+				5F425EB1330C8E5739C0F0AE55F73D2A /* Pods */,
 				B43ECE86EE1CAA1E1A277A7DBE577EB9 /* Products */,
 				91CDDA84DF7A3A70C19BEC75FCE52411 /* ProjectFiles */,
 				D3CF8F20541E092EF5AC0971CAB697CC /* ZFModuleDemo_impl */,
@@ -70,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				D2A038B16ED94AE08513468CFA2D7820 /* Foundation.framework */,
+				6B50E0F886919719533229E92026317D /* Pods_ZFModuleDemo_impl.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -105,6 +107,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A58354B33B57B9C42BA19D51B57F2A0A /* Build configuration list for PBXNativeTarget "ZFModuleDemo_impl" */;
 			buildPhases = (
+				921AC8760CADF714B75E4D529766B6AB /* [CP] Check Pods Manifest.lock */,
 				437332D9D0F513CAF8C85D4AE111EE5A /* ZFCompileSource */,
 				AC25E3525D89E7ECE0DEEBBDC57CD488 /* Sources */,
 				8E480A76C549CE31A17565F5D6DF8C1A /* Frameworks */,
@@ -134,10 +137,6 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
-					C0BF2F5B5BB8BFF0893AFEE2956A7FF6 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-					};
 				};
 			};
 			buildConfigurationList = 1E8D54EB974CF8B552C1FC7937C248C3 /* Build configuration list for PBXProject "ZFModuleDemo_impl" */;
@@ -154,25 +153,11 @@
 			projectRoot = "";
 			targets = (
 				1F99DB1BF94DF9B4C96143FDF16887CC /* ZFModuleDemo_impl */,
-				C0BF2F5B5BB8BFF0893AFEE2956A7FF6 /* ZFModuleDemo_impl_aggregate */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		342B58B6C43BFC0475F1132A0030608E /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "ZF_ROOT_PATH=${SRCROOT}/../../../../../../ZFFramework\n\nsh $ZF_ROOT_PATH/tools/spec/iOS/aggregate.sh ${PROJECT_NAME} ${SRCROOT}/../../..\n";
-		};
 		437332D9D0F513CAF8C85D4AE111EE5A /* ZFCompileSource */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -188,6 +173,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "sh ${SRCROOT}/../../../../../../ZFFramework/tools/common/unity_build.sh \"${SRCROOT}/ProjectFiles/zfgensrc_ZFModuleDemo_impl.mm\" \"${SRCROOT}/../../../zfsrc\"";
+		};
+		921AC8760CADF714B75E4D529766B6AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZFModuleDemo_impl-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 		D5ADC04DE08DF716588F423C49BCE709 /* ZFUniqueProj */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -218,20 +225,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		01920B70B79CA24CDBC5273D77D3826C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		09C5B0E40D9B650BD348B58E20B9B2FF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
 		79AB4C0AD5E37CA748223E91F1074871 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -340,6 +333,7 @@
 		};
 		F6B971647F0A0581C810F88B1D800B7C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B304DCD72CCE5F4DAAA261CFEA14656 /* Pods-ZFModuleDemo_impl.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -366,6 +360,7 @@
 		};
 		F7154E80D816C698116BE4B1E28C1487 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 984DF8B79AC28EB4376BA62BD621420A /* Pods-ZFModuleDemo_impl.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -407,15 +402,6 @@
 			buildConfigurations = (
 				F6B971647F0A0581C810F88B1D800B7C /* Debug */,
 				F7154E80D816C698116BE4B1E28C1487 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C4DB1149DF5752D47E42AEF8991F711A /* Build configuration list for PBXAggregateTarget "ZFModuleDemo_impl_aggregate" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				09C5B0E40D9B650BD348B58E20B9B2FF /* Debug */,
-				01920B70B79CA24CDBC5273D77D3826C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
