@@ -6,11 +6,12 @@ add_compile_options("$<$<CONFIG:DEBUG>:-DDEBUG>")
 
 include("${PROJECT_SOURCE_DIR}/zfprojConfig.cmake" OPTIONAL)
 
-file(GLOB_RECURSE ZF_SRC_FILES RELATIVE "${PROJECT_SOURCE_DIR}"
-    "${PROJECT_SOURCE_DIR}/../../../zfsrc/*.c"
-    "${PROJECT_SOURCE_DIR}/../../../zfsrc/*.cpp"
-    "${PROJECT_SOURCE_DIR}/../../../zfsrc_ext/*.c"
-    "${PROJECT_SOURCE_DIR}/../../../zfsrc_ext/*.cpp"
+zfprojSrcFiles(
+    ZF_SRC_FILES
+    "${CMAKE_BINARY_DIR}/zfgensrc_ZFModuleDemo_impl.cpp"
+    "${ZF_ROOT_PATH}"
+    "${PROJECT_SOURCE_DIR}"
+    "${PROJECT_SOURCE_DIR}/../../.."
     )
 if(COMMAND zfprojConfigBefore_ZFModuleDemo_impl)
     zfprojConfigBefore_ZFModuleDemo_impl(ZFModuleDemo_impl ZF_SRC_FILES)
@@ -27,7 +28,6 @@ target_include_directories(ZFModuleDemo_impl PRIVATE "${PROJECT_SOURCE_DIR}/../.
 
 function(ZFAddLib ZF_LIB_NAME_)
     target_include_directories(ZFModuleDemo_impl PRIVATE "${ZF_ROOT_PATH}/_release/cmake/all/include")
-
     target_link_directories(ZFModuleDemo_impl PUBLIC "${ZF_ROOT_PATH}/_release/cmake/module/${ZF_LIB_NAME_}/lib")
     target_link_libraries(ZFModuleDemo_impl PRIVATE ${ZF_LIB_NAME_})
 endfunction()
@@ -47,11 +47,11 @@ install(
     TARGETS ZFModuleDemo_impl
     DESTINATION "${ZF_ROOT_PATH}/_release/cmake/module/ZFModuleDemo_impl/lib"
     )
-if(WIN32)
-    execute_process(COMMAND "${ZF_ROOT_PATH}\\tools\\util\\copy_res.bat" "${PROJECT_SOURCE_DIR}\\..\\..\\..\\zfres\\" "${ZF_ROOT_PATH}\\_release\\cmake\\module\\ZFModuleDemo_impl\\zfres")
-else()
-    execute_process(COMMAND sh "${ZF_ROOT_PATH}/tools/util/copy_res.sh" "${PROJECT_SOURCE_DIR}/../../../zfres/" "${ZF_ROOT_PATH}/_release/cmake/module/ZFModuleDemo_impl/zfres")
-endif()
+install(
+    DIRECTORY "${PROJECT_SOURCE_DIR}/../../../zfres/"
+    DESTINATION "${ZF_ROOT_PATH}/_release/cmake/module/ZFModuleDemo_impl/zfres"
+    PATTERN "ZF_PUT_RES_FILES_HERE" EXCLUDE
+    )
 
 install(
     DIRECTORY "${ZF_ROOT_PATH}/_release/cmake/module/ZFModuleDemo_impl/"
